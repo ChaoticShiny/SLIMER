@@ -21,6 +21,7 @@ GENERAL NOTES
 
 
 CONTENTS
+
 code
 - CMakeLists and exec.mac should be left alone.
 - Run.mac should be modified depending on the desired simulation.
@@ -47,6 +48,7 @@ RUNNING A SIMULATION
 
 
 IMAGEJ
+
 Images are analyzed through ImageJ with several macros, run in the following order: 
 
 1. The getAverage macro takes the average of all the images in the set. This is to establish a baseline that can then be subtracted from every image in order to eliminate some background noise.
@@ -67,6 +69,7 @@ Notes:
 
 
 ROOT/SCRIPTS
+
 Note: All ROOT macros are run in the terminal with root -l macroname.C (or macroname.cc) unless otherwise stated.
 - addTwoHists.C: The input of this macro can be changed, but its purpose is to add Sr and Y runs together to get a more accurate representation of the decay.
 - graphToHist.C: This takes a graph from a TTree and changes it to a Histogram, to make it easier to manipulate.
