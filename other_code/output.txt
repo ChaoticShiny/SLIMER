@@ -1,0 +1,41 @@
+Filename is /media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.txt
+length is 61
+/media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.root
+ found 102336 points
+Filename is /media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.txt
+length is 61
+/media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.root
+ found 102336 points
+5.09362
+Integral of hEn: 102622
+Integral of hMax: 102336
+Integral of hMaxCal: 102336
+Filename is /media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.txt
+length is 61
+/media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.root
+ found 102336 points
+5.09362
+Integral of hEn: 102622
+Integral of hMax: 102336
+Integral of hMaxCal: 102336
+Filename is /media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.txt
+length is 61
+/media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.root
+ found 102336 points
+5.09362
+Integral of hEn: 102622
+Integral of hMax: 102336
+Integral of hMaxCal: 102336
+Filename is /media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.txt
+length is 61
+/media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.root
+ found 102336 points
+Chi2 = 1247.937562, Prob = 5.87518e-134, NDF = 245, igood = 3
+Filename is /media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.txt
+length is 61
+/media/gwendolyn/SLIMER DATA/Run036_1/Results-036_1-th170.root
+ found 102336 points
+5.09362
+Integral of hEn: 102622
+Integral of hMax: 102336
+Integral of hMaxCal: 102336
