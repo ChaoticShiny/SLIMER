@@ -34,6 +34,7 @@ other_code
 
 
 RUNNING A SIMULATION
+
 1. If the folder code_build does not already exist in parallel with code, create it. 
 
 2. From code_build, run sudo cmake -DGeant4_DIR=/path/to/geant4.9.6.p04/lib[64]/Geant4-9.6.0/
@@ -47,6 +48,7 @@ RUNNING A SIMULATION
 
 IMAGEJ
 Images are analyzed through ImageJ with several macros, run in the following order: 
+
 1. The getAverage macro takes the average of all the images in the set. This is to establish a baseline that can then be subtracted from every image in order to eliminate some background noise.
 
 2. The subtractAverage macro subtracts the generated average from every image.
