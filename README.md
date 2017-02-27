@@ -4,10 +4,10 @@ This readme covers how to run the GEANT4 simulation for SLIMER, as well as the c
 
 
 **REQUIREMENTS**
-- CMake
-- GEANT4
-- ROOT
-- ImageJ
+- [CMake](https://cmake.org/)
+- [GEANT4](http://geant4.web.cern.ch/geant4/)
+- [ROOT](https://root.cern.ch/)
+- [ImageJ](https://imagej.nih.gov/ij/)
 
 
 **CURRENT BUGS**
@@ -17,7 +17,6 @@ This readme covers how to run the GEANT4 simulation for SLIMER, as well as the c
 - All filepaths in the code are set for my personal computer, and will need to be changed before the macros can be run.
 - all_runs.pdf is the run log for the entire summer.
 - Some runs end at a number that is not round because occasionally MicroManager would freeze right at the end of a run, especially on the longer ones.
-- A copy of ImageJ has been included.
 
 
 **CONTENTS**
