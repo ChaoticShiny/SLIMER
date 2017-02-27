@@ -3,38 +3,38 @@
 This readme covers how to run the GEANT4 simulation for SLIMER, as well as the current procedures for processing experimental data using ImageJ, and comparing experimental and simulation data using ROOT.
 
 
-REQUIREMENTS
+**REQUIREMENTS**
 - CMake
 - GEANT4
 - ROOT
 - ImageJ
 
 
-CURRENT BUGS
+**CURRENT BUGS**
 - run.mac gets into an apparently infinite loop. 
 
-GENERAL NOTES
+**GENERAL NOTES**
 - All filepaths in the code are set for my personal computer, and will need to be changed before the macros can be run.
 - all_runs.pdf is the run log for the entire summer.
 - Some runs end at a number that is not round because occasionally MicroManager would freeze right at the end of a run, especially on the longer ones.
 - A copy of ImageJ has been included.
 
 
-CONTENTS
+**CONTENTS**
 
-code
+*code*
 - CMakeLists and exec.mac should be left alone.
 - Run.mac should be modified depending on the desired simulation.
 
-code_build
+*code_build*
 - Everything in this folder should be generated automatically. 
 - Temporary changes can be made here, but will be overwritten next time the code is compiled.
 
-other_code
+*other_code*
 - This folder contains all the root scripts used to view and compare data. See "ROOT/SCRIPTS" for more information.
 
 
-RUNNING A SIMULATION
+**RUNNING A SIMULATION**
 
 1. If the folder code_build does not already exist in parallel with code, create it. 
 
@@ -47,7 +47,7 @@ RUNNING A SIMULATION
 5. To store the output from run.mac in a text file, use ./exec run.mac >> output.txt.
 
 
-IMAGEJ
+**IMAGEJ**
 
 Images are analyzed through ImageJ with several macros, run in the following order: 
 
@@ -68,7 +68,7 @@ Notes:
 - It works by looking first for pixels that are above a certain grayscale brightness, and then searching for a certain number of pixels in a small square around the bright pixel that are above a different, slightly lower brightness.
 
 
-ROOT/SCRIPTS
+**ROOT/SCRIPTS**
 
 Note: All ROOT macros are run in the terminal with root -l macroname.C (or macroname.cc) unless otherwise stated.
 - addTwoHists.C: The input of this macro can be changed, but its purpose is to add Sr and Y runs together to get a more accurate representation of the decay.
