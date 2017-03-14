@@ -11,7 +11,7 @@ This readme covers how to run the GEANT4 simulation for SLIMER, as well as the c
 
 
 **CURRENT BUGS**
-- run.mac gets into an apparently infinite loop. 
+- None
 
 **GENERAL NOTES**
 - All filepaths in the code are set for my personal computer, and will need to be changed before the macros can be run.
