@@ -1,0 +1,21 @@
+rnum = "009_2"
+
+prefix = "/media/gwendolyn/My Passport/Run";
+
+
+m=0;
+n=499;
+setBatchMode(true);
+
+for(i = m; i<=n; i++) {
+     if(i<10){filename = "img_00000000";}
+     else if(i<100){filename = "img_0000000";}
+     else if(i<1000){filename = "img_000000";}
+     else if(i<10000){filename = "img_00000";}
+     else {filename = "img_0000";}
+     open(prefix + rnum + "/blur/" + filename + i + "smooth.tif");
+     run("Measure");
+}
+saveAs("Results", prefix + rnum + "/blur/" +"ResultsMeasured.txt");
+close();
+setBatchMode(false);
