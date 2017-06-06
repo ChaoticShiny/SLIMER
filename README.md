@@ -9,6 +9,8 @@ This readme covers how to run the GEANT4 simulation for SLIMER, as well as the c
 - [ROOT](https://root.cern.ch/)
 - [ImageJ](https://imagej.nih.gov/ij/)
 
+Note that each item listed here has requirements of its own.
+
 
 **CURRENT BUGS**
 - None
@@ -64,10 +66,11 @@ Images are analyzed through ImageJ with several macros, run in the following ord
 5. The eventFinder macro tests every image to see if it contains an event, and copies each image into either an "events" folder or a "noevents" folder.
 
 Notes: 
-- AllValuesLooped sorts the images after the gaussian blur has been applied to them. 
-- All the other macros use every image, unsorted. The number of events per run is used in other data, but it's not important for the macros. 
-- What we've found so far indicates that AllValuesLooped is fairly accurate, although it picks up about 50 images per 10000 as having events that do not have events. It has no way to account for multiple events per image. 
-- It works by looking first for pixels that are above a certain grayscale brightness, and then searching for a certain number of pixels in a small square around the bright pixel that are above a different, slightly lower brightness.
+- The macros need to be edited for the filepaths on your computer.
+- ImageJ requires Java 8, and at least 4 gb of allocated ram.
+- Running more than about 2000 images at once will cause ImageJ to slow down unusably. To process runs that are longer than 2000 images, edit the variables *m* and *n* within the macros to the starting and ending image number, respectively.
+- eventFinder sorts the images after the gaussian blur has been applied to them. All the other macros use every image, unsorted. The number of events per run is used in other data, but it's not important for the macros. 
+- What we've found so far indicates that eventFinder is fairly accurate, although it picks up about 250 images per 10000 as having events that do not have events. It has no way to count multiple events per image. It works by looking first for pixels that are above a certain grayscale brightness, and then searching for a certain number of pixels in a small square around the bright pixel that are above a different, slightly lower brightness.
 
 
 **ROOT/SCRIPTS**
