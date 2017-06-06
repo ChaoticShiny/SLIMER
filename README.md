@@ -32,6 +32,9 @@ This readme covers how to run the GEANT4 simulation for SLIMER, as well as the c
 *other_code*
 - This folder contains all the root scripts used to view and compare data. See "ROOT/SCRIPTS" for more information.
 
+*ImageJ macros*
+- See the section for ImageJ.
+
 
 **RUNNING A SIMULATION**
 
@@ -56,9 +59,9 @@ Images are analyzed through ImageJ with several macros, run in the following ord
 
 3. The gaussianBlur macro applies a gaussian blur to every image. This makes events more easily visible.
 
-4. The getResults2 macro (there is no getResults1 or getResults) looks for peaks in each image, and records information about all of them that it finds.
+4. The getResults macro looks for peaks in each image, and records information about all of them that it finds.
 
-5. The AllValuesLooped macro tests every image to see if it contains an event, and copies each image into either an "events" folder or a "noevents" folder.
+5. The eventFinder macro tests every image to see if it contains an event, and copies each image into either an "events" folder or a "noevents" folder.
 
 Notes: 
 - AllValuesLooped sorts the images after the gaussian blur has been applied to them. 
