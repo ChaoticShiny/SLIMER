@@ -20,8 +20,8 @@
  * 
  * * * * simcompare_with_ij2root.C macro * * * *
  * The first point of this macro was to combine the other two, eliminating a step in the analysis process. 
- * The second point was to get some sort of calibration: the camera data has units of "pixels" or something mysterious, 
- * while the simulation data has normal units. If the data sets match reasonably well, units can be found for the camera data.
+ * The second point was to get some sort of calibration: the camera data has units of "gray value", 
+ * while the simulation data has units of keV. If the data sets match reasonably well, units can be found for the camera data.
  * 
  * Run the same way as ij2root.C: root -l first, then .x simcompare_with_ij2root.C("path/to/filename.txt")
  */
@@ -68,7 +68,7 @@ void simcompare_with_ij2root(string filetxt){
 		ntuple->Fill(area, mean, min, max, x, y, intden, intden2); //fill the branches
 		nlines++;
 	}
-	printf(" found %d points\n",nlines);
+	printf("ImageJ found %d peaks.\n",nlines); //this is how many "peaks" ImageJ picked up in the getResults macro
 
 	in.close();
 
@@ -77,8 +77,8 @@ void simcompare_with_ij2root(string filetxt){
 	
 	//this part is from sim-compare
 	
-	TFile *f = new TFile("/home/gwendolyn/Things/Fall2015_Research/code_build/Cs2.root"); //simulation data
-	TFile *f2 = new TFile("/media/gwendolyn/SLIMER DATA/Run098_1/Results-098_1-th170.root"); //real data
+	TFile *f = new TFile("/home/gwendolyn/Things/Fall2015_Research/code_build/C.root"); //simulation data
+	TFile *f2 = new TFile("/media/gwendolyn/My Passport/Run098_1/Results-098_1-th170.root"); //real data
 	
 	TTree *t1 = (TTree*)f->Get("file");  //simulation
 	TTree *t2 = (TTree*)f2->Get("ntuple");  //data
@@ -131,7 +131,7 @@ void simcompare_with_ij2root(string filetxt){
 	}
 	
 	Double_t res[1500];
-	cout << hEn->Chi2Test(hMaxCal,"UW CHI2/NDF",res) << endl;
+	cout << hEn->Chi2Test(hMaxCal,"UW CHI2/NDF",res) << endl; //this is the chi2/ndf value
 	
 	
 //----------------------------------------------------------------------------------
@@ -181,5 +181,7 @@ void simcompare_with_ij2root(string filetxt){
 	cout << "Integral of hEn: " << integral0 << endl;
 	cout << "Integral of hMax: " << integral1 << endl;
 	cout << "Integral of hMaxCal: " << integral2 << endl;	
+	
+	gPad->SetLogy(); //a log scale is useful on the y axis
 }
 
