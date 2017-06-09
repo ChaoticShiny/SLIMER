@@ -1,0 +1,472 @@
+\documentclass[12pt]{amsart}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+% See the ``Article customise'' template for come common customisations
+
+\title{Table of all runs}
+\date{2016}
+
+\begin{document}
+
+\maketitle
+
+* = aborted run
+
+** = check logbook for additional notes; probably not a useful run
+
+Note: Unless specified, $^{14}$C means the strong $^{14}$C source (0.9853 $\mu$Ci), not the weak one. 
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Source list}
+	\label{tab:table0}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccc}
+		\toprule
+		Source & Activity$_0$ & $t_0$ & $t_{1/2}$ & Activity$_t$\\
+		\midrule
+		$^{241}$Am $\alpha$ & --- & --- & --- & ---\\
+		$^{241}$Am $\gamma$ & 10.51 $\mu$Ci & 12 Jan 1970 & --- & ---\\
+		$^{14}$C $\beta$ (strong) & 0.9853 $\mu$Ci & 15 Nov 2012 & --- & ---\\
+		$^{14}$C $\beta$ (weak) & 45.18 nCi & 01 Sept 2011 & --- & ---\\
+		$^{133}$Ba $\gamma$ & 2003 & --- & --- & ---\\
+		$^{137}$Cs (window) & 10 $\mu$Ci & --- & --- & ---\\
+		$^{90}$Sr & --- & --- & --- & ---\\
+		$^{22}$Na & 10$\mu$Ci & 2003 & --- & ---\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/8/2016}
+	\label{tab:table1}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		001 & 4X & 200 & 3 & 100 ms & none & 10 & $^{241}$Am $\alpha$\\
+		002 & 4X & 200 & 3 & 100 ms & none & 2000 & $^{241}$Am $\alpha$\\
+		003 & 10X & 200 & 3 & 100 ms & none & 2000 & $^{241}$Am $\alpha$\\
+		004 & 20X & 200 & 3 & 100 ms & none & 2000 & $^{241}$Am $\alpha$\\
+		005 & 10XS & 200 & 3 & 100 ms & none & 2000 & $^{241}$Am $\alpha$\\
+		006 & 20XS & 200 & 3 & 100 ms & none & 2000 & $^{241}$Am $\alpha$\\
+		007 & 20XS & 200 & 3 & 25 ms & none & 500 & $^{14}$C\\
+		007.2 & 20XS & 200 & 3 & 25 ms & 4x4 & 500 & $^{14}$C\\
+		008 & 10XS & 200 & 3 & 25 ms & 4x4 & 500 & $^{14}$C\\
+		009 & 10XS & 200 & 3 & 25 ms & 4x4 & 500 & dark\\
+		009.2 & 20XS & 200 & 3 & 25 ms & 4x4 & 500 & dark\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/9/16}
+	\label{tab:table2}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		010 & 10XS & 200 & 3 & 25 ms & 4x4 & 500 & $^{90}$Sr\\
+		011 & 20XS & 200 & 3 & 25 ms & 4x4 & 500 & $^{90}$Sr\\
+		012 & 10X & 200 & 3 & 25 ms & 4x4 & 500 & $^{90}$Sr\\
+		013 & 20X & 200 & 3 & 25 ms & 4x4 & 500 & $^{90}$Sr\\
+		014 & 10XS & 200 & 3 & 25 ms & 4x4 & 500 & dark\\
+		015 & 20XS & 200 & 3 & 25 ms & 4x4 & 500 & dark\\
+		016 & 10X & 200 & 3 & 25 ms & 4x4 & 500 & dark\\
+		017 & 20X & 200 & 3 & 25 ms & 4x4 & 500 & dark\\
+		018 & 10XS & 200 & 3 & 25 ms & none & 5000 & $^{14}$C/mask*\\
+		019 & 10XS & 200 & 3 & 25 ms & none & 5000 & $^{14}$C/mask\\
+		020 & 10XS & 200 & 3 & 25 ms & none & 5000 & dark/mask\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/10/16}
+	\label{tab:table3}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		021 & 10XS & 200 & 3 & 25 ms & 4x4 & 8000 & $^{90}$Sr\\
+		022 & 10XS & 200 & 3 & 25 ms & 4x4 & 2000 & $^{14}$C/linemask\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/13/10}
+	\label{tab:table4}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		023 & 10XS & 200 & 3 & 25 ms & 4x4 & 500 & dummy\\
+		024 & 10XS & 200 & 3 & 25 ms & 4x4 & 500 & $^{241}$Am $\gamma$\\
+		025 & 10XS & 200 & 3 & 10 ms & 4x4 & 500 & $^{241}$Am $\gamma$\\
+		026 & 10XS & 200 & 3 & 10 ms & 4x4 & 750 & dark\\
+		027 & 10XS & 200 & 3 & 25 ms & 4x4 & 500 & dark\\
+		028 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{22}$Na\\
+		029 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{133}$Ba\\
+		030 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{14}$C weak\\
+		031 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & dark\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/15/10}
+	\label{tab:table5}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		032 & 10XS & 200 & 3 & 25 ms & 4x4 & 5000 & $^{133}$Ba\\
+		033 & 10XS & 200 & 3 & 25 ms & 4x4 & 5000 & dark\\
+		034 & 10XS & 200 & 3 & 25 ms & 4x4 & 5000 & $^{241}$Am $\gamma$\\
+		035 & 10XS & 200 & 3 & 25 ms & 4x4 & 5000 & $^{14}$C strong\\
+		036 & 10XS & 200 & 3 & 25 ms & 4x4 & 5000 & $^{137}$Cs $\gamma \beta$\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/16/10}
+	\label{tab:table6}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		037 & 10XS & 200 & 3 & 10 ms & 4x4 & 10000 & $^{14}$C strong\\
+		038 & 10XS & 200 & 3 & 10 ms & 4x4 & 10000 & $^{14}$C strong\\
+		039 & 10XS & 200 & 3 & 10 ms & 4x4 & 10000 & dark\\
+		040 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & dark\\
+		041 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{14}$C strong\\
+		042 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{14}$C strong\\
+		043 & --- & --- & --- & --- & --- & --- & ---\\
+		044 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{241}$Am $\alpha$ mask\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/23/10}
+	\label{tab:table7}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		045 & 10XS & 200 & 3 & 10 ms & none & 10 & cloth\\
+		046 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & cloth\\
+		047 & 20XS & 200 & 3 & 25 ms & 4x4 & 10000 & cloth\\
+		048 & 20XS & 200 & 3 & 25 ms & 4x4 & 10000 & dark\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/30/16}
+	\label{tab:table8}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		049 & 10XS & 200 & 3 & 25 ms & 2x2 & 10000 & $^{14}$C weak\\
+		050 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{90}$Sr\\
+		050.2 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{90}$Sr (cloth)\\
+		051 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{137}$Cs $\gamma \beta$\\
+		052 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{137}$Cs $\gamma \beta$ (cloth)\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/30/16: Paper Mask}
+	\label{tab:table9}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+		\toprule
+		\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+		\midrule
+		054 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{14}$C w/ paper\\
+		067 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{14}$C\\
+		\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/30/16: Gain Testing}
+	\label{tab:table10}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	053 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	055 & 10XS & 200 & 1 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	056 & 10XS & 200 & 2 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	057 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	058 & 10XS & 100 & 1 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	059 & 10XS & 100 & 2 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	060 & 10XS & 100 & 3 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	061 & 10XS & 300 & 1 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	062 & 10XS & 300 & 2 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	063 & 10XS & 300 & 3 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	064 & 10XS & 400 & 1 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	065 & 10XS & 400 & 2 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	066 & 10XS & 400 & 3 & 25 ms & 4x4 & 1000 & $^{14}$C\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/1/2016: Very long masked $^{14}$C run}
+	\label{tab:table11}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	068 & 10XS & 200 & 3 & 25 ms & 4x4 & 49354 & $^{14}$C w/ paper\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/1/2016: Gain Testing Dark Runs}
+	\label{tab:table12}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	069 & 10XS & 200 & 3 & 25 ms & 4x4 & 1000 & dark\\
+	070 & 10XS & 200 & 2 & 25 ms & 4x4 & 1000 & dark\\
+	071 & 10XS & 200 & 1 & 25 ms & 4x4 & 1000 & dark\\
+	072 & 10XS & 100 & 3 & 25 ms & 4x4 & 1000 & dark\\
+	073 & 10XS & 100 & 2 & 25 ms & 4x4 & 1000 & dark\\
+	074 & 10XS & 100 & 1 & 25 ms & 4x4 & 1000 & dark\\
+	075 & 10XS & 300 & 3 & 25 ms & 4x4 & 1000 & dark\\
+	076 & 10XS & 300 & 2 & 25 ms & 4x4 & 1000 & dark\\
+	077 & 10XS & 300 & 1 & 25 ms & 4x4 & 1000 & dark\\
+	078 & 10XS & 400 & 3 & 25 ms & 4x4 & 1000 & dark\\
+	079 & 10XS & 400 & 2 & 25 ms & 4x4 & 1000 & dark\\
+	080 & 10XS & 400 & 1 & 25 ms & 4x4 & 1000 & dark\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/11/2016}
+	\label{tab:table13}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	081 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{241}$Am $\alpha$\\
+	082 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{241}$Am $\alpha$ w/ paper\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/26/2016: Finding minimum detectable activity}
+	\label{tab:table14}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	083 & 10XS & 200 & 3 & 25 ms & 4x4 & 8999 & $^{241}$Am $\alpha$; paper\\
+	084 & --- & --- & --- & --- & --- & --- & ---\\
+	085 & 10XS & 200 & 3 & 25 ms & 4x4 & 8985 & $^{241}$Am $\gamma$; nothing\\
+	086 & 10XS & 200 & 3 & 25 ms & 4x4 & 8970 & $^{14}$C weak; spacer\\
+	087 & 10XS & 200 & 3 & 25 ms & 4x4 & 9000 & $^{14}$C; 250 $\mu$m mask\\
+	088 & 10XS & 200 & 3 & 25 ms & 4x4 & 9000 & $^{14}$C; spacer\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/28/16: Finding minimum detectable activity correctly}
+	\label{tab:table15}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	089 & 10XS & 200 & 3 & 25 ms & 4x4 & 9994 & $^{14}$C; nothing\\
+	090 & 10XS & 200 & 3 & 25 ms & 4x4 & 9999 & $^{14}$C; spacer\\
+	091 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{14}$C; 250 $\mu$m mask\\
+	092 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{14}$C weak; spacer\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\clearpage
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/29/16: Finding minimum detectable activity with americium}
+	\label{tab:table16}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	093 & 10XS & 200 & 3 & 25 ms & 4x4 & 9999 & $^{14}$C; 1 mm mask\\
+	094 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{241}$Am; nothing\\
+	095 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{241}$Am; spacer\\
+	096 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{241}$Am; 250 $\mu$m mask\\
+	097 & 10XS & 200 & 3 & 25 ms & 4x4 & 9998 & $^{241}$Am; 1 mm mask\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{8/2/16: New Cs and Sr runs (old Sr run had readout speed of 17 MHz instead of 5 MHz); Sr run for position resolution}
+	\label{tab:table17}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	098 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{137}$Cs\\
+	099 & 10XS & 200 & 3 & 25 ms & 4x4 & 9999 & $^{90}$Sr\\
+	100 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{90}$Sr; 250 $\mu$m mask\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{8/3/16: Very long masked runs for position resolution}
+	\label{tab:table18}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	101 & 10XS & 200 & 3 & 25 ms & 4x4 & 19999 & $^{14}$C; 250 $\mu$m mask\\
+	102 & --- & --- & --- & --- & --- & --- & ---\\
+	103 & 10XS & 200 & 3 & 25 ms & 4x4 & 20000 & $^{241}$Am; 250 $\mu$m mask\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{8/3/16: New C, Cs, and Sr data to see if results from yesterday can be replicated}
+	\label{tab:table19}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	104 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{14}$C\\
+	105 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{137}$Cs\\
+	106 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{90}$Sr\\
+	107 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{14}$C\\
+	108 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{137}$Cs\\
+	109 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & $^{90}$Sr\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{8/9/16: Dark runs to understand background}
+	\label{tab:table20}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	110 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & dark, no CsI\\
+	111 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & dark, CsI\\
+	112 & 10XS & 200 & 3 & 25 ms & 4x4 & 10000 & dark, CsI, 250 $\mu$m mask\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{8/9/16: Masked runs for position resolution; used half of the 1 mm mask for both of these.}
+	\label{tab:table21}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	113 & 10XS & 200 & 3 & 25 ms & 4x4 & 14997 & $^{14}$C\\
+	114 & 10XS & 200 & 3 & 25 ms & 4x4 & 15000 & $^{90}$Sr\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Table Template}
+	\label{tab:table0000}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\end{document}
