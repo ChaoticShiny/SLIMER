@@ -36,6 +36,8 @@
 #include "G4Step.hh"
 #include "G4RunManager.hh"
 
+using namespace CLHEP;
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 SteppingAction::SteppingAction(DetectorConstruction* detectorConstruction, EventAction* eventAction)
@@ -113,7 +115,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   	if(volume->GetName() == "CsI" && step->GetTrack()->GetDefinition()->GetPDGEncoding() != 0.)
   	{
   		// energy deposit
-  		G4double edep = step->GetTotalEnergyDeposit()/keV;
+  		G4double edep = step->GetTotalEnergyDeposit()/CLEHP::keV;
   
   		// step length
   		G4double stepLength = 0.;
