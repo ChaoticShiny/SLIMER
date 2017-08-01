@@ -48,8 +48,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	G4Element* O = new G4Element("Oxygen","O",z=8,a=16.00*g/mole);
 
 	G4Material* Air = new G4Material("Air",density=1.29*mg/cm3,nelements=2);
-	Air->AddElement(N,70.*perCent);
-	Air->AddElement(O,30.*perCent);
+	Air->AddElement(N, 0.70);
+	Air->AddElement(O, 0.30);
 
 	// CsI
 	// 
@@ -66,7 +66,32 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	
 	G4Material* Aluminum = new G4Material("Aluminum",density=2.70*g/cm3,nelements=1);
 	Aluminum->AddElement(Al,1);
+
+
+
+	// Glass
+	//
+	G4Element* Si = new G4Element("Silicon","Si",z=14,a=28.09*g/mole);
 	
+	G4Material* Silicate = new G4Material("Silicate",density=2.65*g/cm3,nelements=2);
+	Silicate->AddElement(Si,1);
+	Silicate->AddElement(O,2);
+
+	G4Element* B = new G4Element("Boron","B",z=5,a=10.81*g/mole);
+	
+	G4Material* BoronTrioxide = new G4Material("BoronTrioxide",density=2.46*g/cm3,nelements=2);
+	BoronTrioxide->AddElement(B,2);
+	BoronTrioxide->AddElement(O,3);
+
+G4cout<<"Made it to constructing glass\n";
+
+	G4Material* Glass = new G4Material("Glass",density=2.587*g/cm3,nelements=2);
+	Glass->AddMaterial(Silicate, 0.85);
+	Glass->AddMaterial(BoronTrioxide, 0.15);
+	
+	G4cout<<"Constructed glass\n";
+
+
 // ------------ Generate & Add Material Properties Table ------------
 
 	const G4int nEntries = 5;
@@ -105,29 +130,41 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	mptAir->AddProperty("RINDEX",PhotonEnergy,RefractiveIndexAir,nEntries);
 	
 	Air->SetMaterialPropertiesTable(mptAir);
-	
+
+
+
+// Glass
+	G4double RefractiveIndexGlass[nEntries] = {1.517,1.517,1.517,1.517,1.517};
+	G4MaterialPropertiesTable* mptGlass = new G4MaterialPropertiesTable();
+	mptGlass->AddProperty("RIndex",PhotonEnergy,RefractiveIndexGlass,nEntries);
+
+	Glass->SetMaterialPropertiesTable(mptGlass);
+
 // ------------- Volumes --------------
 	
 // The world
 	
-	G4double worldx = 100.0*cm;
-	G4double worldy = 100.0*cm;
-	G4double worldz = 100.0*cm;
+	G4double worldx = 10.0*cm;
+	G4double worldy = 10.0*cm;
+	G4double worldz = 10.0*cm;
 	
 	G4Box* solidWorld = new G4Box("World",worldx,worldy,worldz);
 	
 	G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld,Air,"World",0,0,0);
 	
 	G4VPhysicalVolume* physWorld = new G4PVPlacement(0,G4ThreeVector(),logicWorld,"World",0,false,0);
-	
+	G4cout<<"Just made physWorld\n";
 	
 // The cylinders
 	
 	G4double innerRadius = 0.0*um;
-	G4double outerRadius = 10*um;
-	G4double hz = 45*um;
-//	G4double hz = 100*um;
-//	G4double hz = 150*um;
+	G4double outerRadius = 5.0*um;
+//	G4double hz = 2.5*um; int Hz = 2.5;
+//	G4double hz = 5*um; int Hz = 5;
+//	G4double hz = 22.5*um; int Hz = 22.5;
+//	G4double hz = 67.5*um; int Hz = 67.5;
+	G4double hz = 75*um; int Hz = 75;
+//	G4double hz = 300*um; int Hz = 300;
 	G4double startAngle = 0.0*deg;
 	G4double spanningAngle = 360.0*deg;
 	
@@ -137,19 +174,81 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	
 	G4VPhysicalVolume* physCylinder = new G4PVPlacement(0,G4ThreeVector(),logicCylinder,"Cylinder",0,false,0,checkOverlaps);
 	
-	G4ThreeVector position = G4ThreeVector();
+	G4ThreeVector positionCyl = G4ThreeVector();
 //	new G4PVPlacement(0,position,logicCylinder,"cylinder",logicWorld,false,0);
 	
 	int k = 0;
 	//do these loops for all the cylinders
-	for (int i = -5; i < 5; i++) {
+	for (int i = -10; i < 10; i++) {
 		for (int j = -5; j < 5; j++) {
-			position = G4ThreeVector(20*i*um,20*j*um,0.0);
-			new G4PVPlacement(0,position,logicCylinder,"CsI",logicWorld,false,k);
+			positionCyl = G4ThreeVector(10*i*um,17.5*j*um,0.0);
+			new G4PVPlacement(0,positionCyl,logicCylinder,"CsI",logicWorld,false,k);
 			k++;
 		}
 	}
+
+	for (int i = -10; i < 10; i++) {
+		for (int j = -5; j < 5; j++) {
+			positionCyl = G4ThreeVector(10*i*um + 5.0*um,17.5*j*um + 8.75*um,0.0);
+			new G4PVPlacement(0,positionCyl,logicCylinder,"CsI",logicWorld,false,k);
+			k++;
+		}
+	}
+
+// Add Cones on top of all cylinders (to more closely match the experiment)
+
+	G4double baseInnerRadius = 0.0*um;
+	G4double baseOuterRadius = 5.0*um;
+	G4double tipInnerRadius = 0.0*um;
+	G4double tipOuterRadius = 0.0*um;
+	G4double hzCone = 1.45*um; int HzCone = 1.45;
+	G4double startAngleCone = 0.0*deg;
+	G4double spanningAngleCone = 360*deg;
+
+	G4Cons* solidCone = new G4Cons("Cone",baseInnerRadius,baseOuterRadius,tipInnerRadius,tipOuterRadius,hzCone,startAngleCone,spanningAngleCone);
+
+	G4LogicalVolume* logicCone = new G4LogicalVolume(solidCone,CesiumIodide,"Cone");
+
+	G4VPhysicalVolume* physCone = new G4PVPlacement(0,G4ThreeVector(),logicCone,"Cone",0,false,0,checkOverlaps);
+
+	G4ThreeVector positionCone = G4ThreeVector();
+// new G4PVPlacement(0,positionCone,logicCone,"Cone",logicworld,false,0);
+
+	int l = 0;
+	//do these loops for all of the cones
+	for (int i = -10; i < 10; i++) {
+		for (int j = -5; j < 5; j++) {
+			positionCone = G4ThreeVector(10*i*um,17.5*j*um,Hz*um + HzCone*um);
+			new G4PVPlacement(0,positionCone,logicCone,"CsI",logicWorld,false,l);
+			l++;
+		}
+	}
+
+	for (int i = -10; i < 10; i++) {
+		for (int j = -5; j < 5; j++) {
+			positionCone = G4ThreeVector(10*i*um + 5.0*um,17.5*j*um + 8.75*um, Hz*um + HzCone*um);
+			new G4PVPlacement(0,positionCone,logicCone,"CsI",logicWorld,false,l);
+			l++;
+		}
+	}
+
+
+// Glass Slide
+	G4double px = 300*um; int Px = 300;
+	G4double py = 300*um; int Py = 300;
+	G4double pz = 500*um; int Pz = 500;
 	
+	G4Box* solidBox = new G4Box("Box", px, py, pz);
+
+	G4LogicalVolume* logicBox = new G4LogicalVolume(solidBox,Glass,"Box");
+
+	G4VPhysicalVolume* physBox = new G4PVPlacement(0,G4ThreeVector(),logicBox,"Box",0,false,0,checkOverlaps);
+
+	G4ThreeVector positionBox = G4ThreeVector();
+// new G4PVPlacement (0,positionBox,logicBox,"Box",logicWorld,false,0);
+	positionBox = G4ThreeVector(0*um,0*um,- Hz*um -Pz*um);
+	new G4PVPlacement(0,positionBox,logicBox,"Glass",logicWorld,false,1);
+
 // The camera
 	
 	G4double cameraInner = 0.0*mm;
@@ -164,7 +263,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	
 	G4VPhysicalVolume* physCamera = new G4PVPlacement(0,G4ThreeVector(),logicCamera,"Camera",0,false,0,checkOverlaps);
 	
-	G4ThreeVector cameraPosition = G4ThreeVector(0,0,-1.0*mm);
+	G4ThreeVector cameraPosition = G4ThreeVector(0,0,-2.0*mm);
 	new G4PVPlacement(0,cameraPosition,logicCamera,"camera",logicWorld,false,0);
 	
 	
@@ -174,8 +273,16 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	OpCsISurface->SetType(dielectric_dielectric);
 	OpCsISurface->SetFinish(polished);
 	OpCsISurface->SetModel(glisur);
-	
+/*
+	G4OpticalSurface* OpCsISurfaceCone = new G4OpticalSurface("CsISurfaceCone");
+	OpCsISurfaceCone->SetType(dielectric_dielectric);
+	OpCsISurfaceCone->SetFinish(polished);
+	OpCsISurfaceCone->SetModel(glisur);
+*/
 	new G4LogicalBorderSurface("CsISurface",physCylinder,physWorld,OpCsISurface);
+	// maybe try it with G4LogicalSkinSurface
+
+//	new G4LogicalBorderSurface("CsISurfaceCone",physCone,physWorld,OpCsISurfaceCone);
 	// maybe try it with G4LogicalSkinSurface
 	
 // Generate & Add Material Properties Table attached to the optical surface
@@ -189,7 +296,14 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	mptSurface->AddProperty("BACKSCATTERCONSTANT",PhotonEnergy,Backscatter,nEntries);
 	
 	OpCsISurface->SetMaterialPropertiesTable(mptSurface);
+
+//	OpCsISurfaceCone->SetMaterialPropertiesTable(mptSurface);
 	
 	
-        return physWorld;             
+        return physWorld;      
+
+
+
+
+ //THIS FILE MIGHT NEED TO BE ADJUSTED IN ORDER TO MORE ACCURATELY REPRESENT THE CONSTRUCTION OF THE SCINTILLATOR!!!       
 }

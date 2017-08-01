@@ -115,7 +115,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   	if(volume->GetName() == "CsI" && step->GetTrack()->GetDefinition()->GetPDGEncoding() != 0.)
   	{
   		// energy deposit
-  		G4double edep = step->GetTotalEnergyDeposit()/CLEHP::keV;
+  		G4double edep = step->GetTotalEnergyDeposit()/CLHEP::keV;
   
   		// step length
   		G4double stepLength = 0.;

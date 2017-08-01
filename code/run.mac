@@ -3,11 +3,11 @@
 # Can be run in batch, without graphic
 # or interactively: Idle> /control/execute run1.mac
 #
-/control/verbose 1
-/run/verbose 2
+/control/verbose 0
+/run/verbose 0
 # Use this open statement to create a .heprep file suitable for
 # viewing in HepRApp:
-#/vis/open HepRepFile 
+/vis/open HepRepFile 
 /vis/scene/create
 /vis/scene/add/volume
 #
@@ -41,7 +41,7 @@
 # (if too many tracks cause core dump => /tracking/storeTrajectory 0)
 #
 # Draw hits at end of event:
-#/vis/scene/add/hits
+/vis/scene/add/hits
 #
 #
 # To superimpose all of the events from a given run:
@@ -90,15 +90,20 @@
 #/gps/energy 59.5409 keV
 #
 /gps/pos/type Plane
-/gps/pos/shape Circle
-/gps/pos/centre 0 0 0.005
+/gps/pos/shape Circle 
+#/gps/pos/centre 0 0 0.001   # for 5 um CsI
+#/gps/pos/centre 0 0 0.0015  # for 10 um CsI
+#/gps/pos/centre 0 0 0.003   # for 45 um CsI
+#/gps/pos/centre 0 0 0.007   # for 135 um CsI
+/gps/pos/centre 0 0 0.0085  # for 150 um CsI
+#/gps/pos/centre 0 0 0.031   # for 600 um CsI or Sr+Y
 /gps/pos/radius 0.2 mm
 #/gps/direction 0 0 -1
 #
-/tracking/verbose 2
-/control/verbose 2
-/run/verbose 2
+/tracking/verbose 0
+/control/verbose 0
+/run/verbose 0
 /run/initialize
 #
-/run/beamOn 50000
+/run/beamOn 1000
 # 
