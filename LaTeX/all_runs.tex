@@ -457,12 +457,275 @@ Note: Unless specified, $^{14}$C means the strong $^{14}$C source (0.9853 $\mu$C
 
 \begin{table}[!htbp]
 	\centering
-	\caption{Table Template}
-	\label{tab:table0000}
+	\caption{6/13/17: Testing consistency of runs with no apparent changes in test environment}
+	\label{tab:table22}
 	\hspace*{-1cm}
 	\begin{tabular}{cccccccc}
 	\toprule
 	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	115 & 10XS & 200 & 3 & 25 ms & 4x4 & 5,000 & dark, no CsI\\
+	116 & 10XS & 200 & 3 & 25 ms & 4x4 & 4,999 & $^{14}$C\\
+	117 & 10XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{14}$C\\
+	118 & 10XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{14}$C\\
+	119 & 10XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{14}$C\\
+	120 & 10XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{14}$C\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/13/17: For use in comparing runs with 10XS vs 20XS objectives
+		(compare to runs in Table 23)}
+	\label{tab:table23}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	121 & 20XS & 200 & 3 & 25 ms & 4x4 & 5,000 & dark, no CsI\\
+	122 & 20XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{14}$C\\
+	123 & 20XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{14}$C\\
+	124 & 20XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{14}$C\\
+	125 & 20XS & 200 & 3 & 25 ms & 4x4 & 4,999 & $^{14}$C\\
+	126 & 20XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{14}$C\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/16/17: For use in comparing runs with 10XS vs 20XS objectives
+		(compare to runs in Table 23)}
+	\label{tab:table24}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	127 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & dark, no CsI\\
+	 & \\
+	128 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{14}$C\\
+	129 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{14}$C\\
+	130 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{14}$C\\
+	 &  \\
+	131 & 20XS & 200 & 3 & 25 ms & 4x4 & 15,000 & $^{14}$C\\
+	132 & 20XS & 200 & 3 & 25 ms & 4x4 & 15,000 & $^{14}$C\\
+	133 & 20XS & 200 & 3 & 25 ms & 4x4 & 14,997 & $^{14}$C\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/20/17: For use in comparing runs with different binning options}
+
+	- - - With no binning options, ImageJ would not process the images properly\
+	\label{tab:table25}
+	\hspace*{-1cm}
+	\begin{tabular}{cccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source\\
+	\midrule
+	134 & 20XS & 200 & 3 & 25 ms & none & 3,936 & dark, no CsI\\
+	135 & 20XS & 200 & 3 & 25 ms & none & 4,000 & $^{14}$C\\
+	136 & 20XS & 200 & 3 & 25 ms & none & 3,999 & $^{14}$C\\
+	137 & 20XS & 200 & 3 & 25 ms & none & 4,000 & $^{14}$C\\
+	 & \\
+	138 & 20XS & 200 & 3 & 25 ms & 2x2 & 4,000 & dark, no CsI\\
+	139 & 20XS & 200 & 3 & 25 ms & 2x2 & 4,000 & $^{14}$C\\
+	140 & 20XS & 200 & 3 & 25 ms & 2x2 & 4,000 & $^{14}$C\\
+	141 & 20XS & 200 & 3 & 25 ms & 2x2 & 4,000 & $^{14}$C\\
+	 & \\
+	 142 & 20XS & 200 & 3 & 25 ms & 4x4 & 4,000 & dark, no CsI\\
+	 143 & 20XS & 200 & 3 & 25 ms & 4x4 & 4,000 & $^{14}$C\\
+	 144 & 20XS & 200 & 3 & 25 ms & 4x4 & 4,000 & $^{14}$C\\
+	 145 & 20XS & 200 & 3 & 25 ms & 4x4 & 4,000 & $^{14}$C\\
+	 & \\
+	 146 & 20XS & 200 & 3 & 25 ms & 8x8 & 4,000 & dark, no CsI\\
+	 147 & 20XS & 200 & 3 & 25 ms & 8x8 & 4,000 & $^{14}$C\\
+	 148 & 20XS & 200 & 3 & 25 ms & 8x8 & 4,000 & $^{14}$C\\
+	 149 & 20XS & 200 & 3 & 25 ms & 8x8 & 4,000 & $^{14}$C\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/23/17: For use in comparing runs with different CsI thicknesses}
+	\label{tab:table26}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
+	\midrule
+	150 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & dark & none\\
+	 & \\
+	151 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{14}$C & 45 um\\
+	152 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{14}$C & 45 um\\
+	153 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{14}$C & 45 um\\
+	 &  \\
+	154 & 20XS & 200 & 3 & 25 ms & 4x4 & 9,989 & $^{14}$C & 135 um\\
+	155 & 20XS & 200 & 3 & 25 ms & 4x4 & 9,988 & $^{14}$C & 135 um\\
+	156 & 20XS & 200 & 3 & 25 ms & 4x4 & 9,997 & $^{14}$C & 135 um\\
+	 & \\
+	 157 & 20XS & 200 & 3 & 25 ms & 4x4 & 9,998 & $^{14}$C & 150 um\\
+	 158 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{14}$C & 150 um\\
+	 159 & 20XS & 200 & 3 & 25 ms & 4x4 & 9,999 & $^{14}$C & 150 um\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/29/17: For use in verifying that CsI thicknesses are labeled correctly}
+	\label{tab:table27}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
+	\midrule
+	160 & 20XS & 200 & 3 & 25 ms & 4x4 & 9,998 & dark & none\\
+	161 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{137}$Cs & 45 um\\
+	162 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{137}$Cs & 135 um\\
+	163 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{137}$Cs & 150 um\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{6/29/17: For use in determining Calibration Constants}
+	\label{tab:table29}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
+	\midrule
+	164 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{137}$Cs & 150 um\\
+	165 & 20XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{137}$Cs & 150 um\\
+	166 & 20XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{137}$Cs & 150 um\\
+	 & \\
+	167 & 20XS & 200 & 3 & 25 ms & 4x4 & 9,999 & $^{90}$Sr & 150 um\\
+	168 & 20 XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{90}$Sr & 150 um\\
+	169 & 20 XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{90}$Sr & 150 um\\
+	170 & 20 XS & 200 & 3 & 25 ms & 4x4 & 5,000 & $^{90}$Sr & 150 um\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/05/17: For use in determining Calibration Constants}
+	\label{tab:table30}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
+	\midrule
+	171 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & dark & none\\
+	172 & 20XS & 200 & 3 & 25 ms & 4x4 & 49,877 & $^{90}$Sr & 150 um\\
+	173 & 20XS & 200 & 3 & 25 ms & 4x4 & 49,987 & $^{90}$Sr & 150 um\\
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/11/17: For use in determining Calibration Constants}
+	\label{tab:table31}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
+	\midrule
+	174 & 20XS & 200 & 3 & 25 ms & 4x4 & 10,000 & dark & none\\
+	175 & 20XS & 200 & 3 & 25 ms & 4x4 & 49,983 & $^{90}$Sr & 150 um\\
+	176 & 20XS & 200 & 3 & 25 ms & 4x4 & 49,409 & $^{90}$Sr & 150 um\\
+	177 & 20XS & 200 & 3 & 25 ms & 4x4 & 49,361 & $^{90}$Sr & 150 um\\
+	178 & 20 XS & 200 & 3 & 25 ms & 4x4 & 49,921 & $^{90}$Sr & 150 um\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/20/17: For use in verifying Calibration Constants}
+	\label{tab:table32}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
+	\midrule
+	179 & 20XS & 200 & 3 & 25 ms & 4x4 & 9,989 & dark & none\\
+	180 & 10XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{241}$Am & 150 um\\
+	181 & 10XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{241}$Am & 150 um\\
+	182 & 10XS & 200 & 3 & 25 ms & 4x4 & 10,000 & $^{241}$Am & 150 um\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/20/17: For use in determining Spacial Resolution}
+	\label{tab:table33}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
+	\midrule
+	183 & 10XS & 200 & 3 & 25 ms & 4x4 & 5,000 & Light + $^{137}$Cs - L Column & 150 um\\
+	184 & 10XS & 200 & 3 & 25 ms & 4x4 & 25,000 & $^{137}$Cs - L Column & 150 um\\
+	185 & 10XS & 200 & 3 & 25 ms & 4x4 & 24,996 & $^{137}$Cs - L Column & 150 um\\
+	 & \\
+	186 & 10XS & 200 & 3 & 25 ms & 4x4 & 5,000 & light + $^{137}$Cs - S Column & 150 um\\
+	187 & 10XS & 200 & 3 & 25 ms & 4x4 & 24,998 & $^{137}$Cs - S Column & 150 um\\
+	188 & 10XS & 200 & 3 & 25 ms & 4x4 & 24,998 & $^{137}$Cs - S Column & 150 um\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{7/24/17: For use in determining Spacial Resolution}
+	\label{tab:table34}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
+	\midrule
+	189 & 10XS & 200 & 3 & 25 ms & 4x4 & 19,000 & dark & none\\
+	190 & 10XS & 200 & 3 & 25 ms & 4x4 & 4,999 & Light - L Column & 150 um\\
+	191 & 10XS & 200 & 3 & 25 ms & 4x4 & 49,859 & $^{14}$C - L Column & 150 um\\
+	192 & 10XS & 200 & 3 & 25 ms & 4x4 & 49,855 & $^{14}$C - L Column & 150 um\\
+	 & \\
+	193 & 10XS & 200 & 3 & 25 ms & 4x4 & 5,000 & light - S Column & 150 um\\
+	194 & 10XS & 200 & 3 & 25 ms & 4x4 & 48,432 & $^{14}$C - S Column & 150 um\\
+	195 & 10XS & 200 & 3 & 25 ms & 4x4 & 48,253 & $^{14}$C - S Column & 150 um\\
+	\bottomrule
+	\end{tabular}
+	\hspace*{-1cm}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Table Template}
+	\label{tab:table0000}
+	\hspace*{-1cm}
+	\begin{tabular}{ccccccccc}
+	\toprule
+	\# & Obj. & EM Gain & PreAmp & Exp. & Binning & \# Images & Source & CsI\\
 	\midrule
 	\bottomrule
 	\end{tabular}
