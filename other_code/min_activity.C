@@ -10,7 +10,7 @@
 	
 	
 	//C14
-	
+
 	TCanvas *c1 = new TCanvas("c1","14C",200,10,700,500);
 	c1->SetGrid();
 	

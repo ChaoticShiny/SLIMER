@@ -1,5 +1,5 @@
-#ifndef HISTSCOPY_H
-#define HISTSCOPY_H
+#ifndef ATTEMPT_H
+#define ATTEMPT_H
 
 #include <iostream>
 #include <iomanip>
@@ -20,7 +20,7 @@ using namespace std;
 
 class HISTS {
 public:
-	//const char *PREFIX = "/media/gwendolyn/FIREFLY/Data/Run";
+	//const char *PREFIX = "/Volumes/My Passport/Data/Run";
 	//char *SUFFIX = "_1/Pos0/ResultsMeasured.txt";
 	char fileName[200];
 	
@@ -30,7 +30,7 @@ public:
 	double xl; 
 	double xh;
 	
-	void defineHists(int rnum);
+	void defineHist(int rnum);
 	bool readMeans(int rnum);
 	bool readMeansBlurred(int rnum);
 	

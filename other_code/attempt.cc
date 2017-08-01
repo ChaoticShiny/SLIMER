@@ -17,15 +17,15 @@ int attempt () {
 	
 	if (regOrBlur == 0) {
 		cout << "You have selected a regular run.\n";
-		if (rnum <= 9) sprintf(hists.fileName,"/media/gwendolyn/FIREFLY/Data/Run00%d_%d/Pos0/ResultsMeasured.txt",rnum,rsuffix);
-		else if (rnum <= 99) sprintf(hists.fileName,"/media/gwendolyn/FIREFLY/Data/Run0%d_%d/Pos0/ResultsMeasured.txt",rnum,rsuffix);
-		else if (rnum <= 999) sprintf(hists.fileName,"/media/gwendolyn/FIREFLY/Data/Run%d_%d/Pos0/ResultsMeasured.txt",rnum,rsuffix);
+		if (rnum <= 9) sprintf(hists.fileName,"/Volumes/My Passport/Run00%d_%d/Pos0/ResultsMeasured.txt",rnum,rsuffix);
+		else if (rnum <= 99) sprintf(hists.fileName,"/Volumes/My Passport/Run0%d_%d/Pos0/ResultsMeasured.txt",rnum,rsuffix);
+		else if (rnum <= 999) sprintf(hists.fileName,"/Volumes/My Passport/Run%d_%d/Pos0/ResultsMeasured.txt",rnum,rsuffix);
 	}
 	else if (regOrBlur == 1) {
 		cout << "You have selected a blurred run.\n";
-		if (rnum <= 9) sprintf(hists.fileName,"/media/gwendolyn/FIREFLY/Data/Run00%d_%d/blur/ResultsMeasured.txt",rnum,rsuffix);
-		else if (rnum <= 99) sprintf(hists.fileName,"/media/gwendolyn/FIREFLY/Data/Run0%d_%d/blur/ResultsMeasured.txt",rnum,rsuffix);
-		else if (rnum <= 999) sprintf(hists.fileName,"/media/gwendolyn/FIREFLY/Data/Run%d_%d/blur/ResultsMeasured.txt",rnum,rsuffix);
+		if (rnum <= 9) sprintf(hists.fileName,"/Volumes/My Passport/Run00%d_%d/blur/ResultsMeasured.txt",rnum,rsuffix);
+		else if (rnum <= 99) sprintf(hists.fileName,"/Volumes/My Passport/Run0%d_%d/blur/ResultsMeasured.txt",rnum,rsuffix);
+		else if (rnum <= 999) sprintf(hists.fileName,"/Volumes/My Passport/Run%d_%d/blur/ResultsMeasured.txt",rnum,rsuffix);
 	}
 	else {
 		cout << "You have not selected an available option.\n";
